@@ -20,57 +20,23 @@ Teknologier brukt:
 Python / Flask
 MariaDB
 HTML / CSS / JS
-(valgfritt) Docker / Nginx / Gunicorn / Waitress
 
-
-3. Server-, infrastruktur- og nettverksoppsett
+3. Server-, infrastruktur og nettverksoppsett
 Servermiljø
 Ubuntu VM / lokal maskin med Python 3.x og MariaDB installert.
 Nettverksoppsett
 
-IP-adresse: 127.0.0.1 (lokal utvikling)
-Port: 5000 (Flask dev-server) / 80 (Nginx i produksjon)
-Brannmurregler: Port 5000 åpen internt, port 80/443 eksponert eksternt
+IP-adresse: 10.200.14.12
+Port: 3306
 
-Klient (nettleser) → Flask (port 5000) → MariaDB (port 3306)
-Tjenestekonfigurasjon
+Klient (nettleser) - request - Flask (routes) - Python (logikk) - MariaDB (data) - tilbake via Flask - Jinja2
+(HTML) - vises i nettlesern
 
-Flask kjøres med Waitress eller Gunicorn i produksjon
-Miljøvariabler lagres i .env-fil
-Filrettigheter: kun applikasjonsbrukeren har lesetilgang til .env
-
-
-4. Prosjektstyring -- GitHub Projects (Kanban)
-Prosjektet ble styrt med GitHub Projects i tre kolonner:
-
-To Do – planlagte oppgaver (f.eks. "Lag databasetabell for øvelser")
-In Progress – aktive oppgaver under utvikling
-Done – fullførte oppgaver
+4. Prosjektstyring GitHub Projects (Kanban)
 
 Issues ble brukt til å spore enkeltfunksjoner og feil.
 Refleksjon: Kanban-tavlen hjalp med å holde oversikt over hva som gjensto og forhindret at jeg jobbet på for mange ting samtidig.
 
-5. Databasebeskrivelse
-Databasenavn: kampklar
-Tabeller:
-TabellFeltDatatypeBeskrivelsesportsidINTPrimærnøkkelsportsnameVARCHAR(100)Navn på sporten (f.eks. "Boksing")sportsiconVARCHAR(10)Emoji-ikonexercisesidINTPrimærnøkkelexercisessport_idINTFremmednøkkel til sportsexercisesnameVARCHAR(255)Navn på øvelsenexerciseslevelVARCHAR(50)beginner / intermediate / advancedexercisestypeVARCHAR(100)Teknikk, Forsvar, Kondisjon osv.exercisesdescriptionTEXTKort beskrivelseexercisesstepsTEXTJSON-array med steg
-SQL-eksempel:
-sqlCREATE TABLE sports (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(100) NOT NULL,
-  icon VARCHAR(10)
-);
-
-CREATE TABLE exercises (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  sport_id INT NOT NULL,
-  name VARCHAR(255) NOT NULL,
-  level VARCHAR(50),
-  type VARCHAR(100),
-  description TEXT,
-  steps TEXT,
-  FOREIGN KEY (sport_id) REFERENCES sports(id)
-);
 
 6. Programstruktur
 kampklar/
