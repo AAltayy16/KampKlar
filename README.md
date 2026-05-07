@@ -21,7 +21,7 @@ Python / Flask
 MariaDB
 HTML / CSS / JS
 
-3. Server-, infrastruktur og nettverksoppsett
+3. Server infrastruktur og nettverksoppsett
 Servermiljø
 Ubuntu VM / lokal maskin med Python 3.x og MariaDB installert.
 Nettverksoppsett
