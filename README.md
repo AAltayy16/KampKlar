@@ -7,11 +7,11 @@ Navn: Arda
 Klasse: 2IMI
 
 Kort beskrivelse av prosjektet:
-KampKlar er en nettapplikasjon for nybegynnere innen kampsport. Brukeren velger en kampsport som feks boksing, karate, judo, MMA, taekwondo eller BJJ – og får opp relevante øvelser og teknikker tilpasset nybegynnernivå. Applikasjonen er bygget med Flask som backend og henter øvelsedata fra en MariaDB-database.
+KampKlar er en nettapplikasjon for nybegynnere innen kampsport. Brukeren velger en kampsport som feks boksing, karate, judo, MMA, taekwondo eller BJJ og får opp relevante øvelser og teknikker tilpasset nybegynnernivå. Applikasjonen er bygget med Flask som backend og henter øvelsedata fra en MariaDB-database.
 
 2. Systembeskrivelse
 Formål med applikasjonen:
-Målet er å gjøre det enklere å komme i gang med kampsport ved å samle grunnleggende øvelser og teknikker på ett sted. Brukeren skal slippe å lete rundt på ulike nettsider – alt er organisert etter sport og vanskelighetsgrad.
+Målet er å gjøre det enklere å komme i gang med kampsport ved å samle grunnleggende øvelser og teknikker på ett sted. Brukeren skal slippe å lete rundt på ulike nettsider alt er organisert etter sport og vanskelighetsgrad.
 
 Brukerflyt:
 Brukeren åpner startsiden og velger en kampsport fra et rutenett.
