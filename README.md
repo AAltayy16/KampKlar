@@ -99,3 +99,12 @@ flask.palletsprojects.com
 w3schools.com
 mariadb.com/docs
 python-dotenv dokumentasjon
+
+
+Huskekode
+
+  id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  icon VARCHAR(10),
+  description TEXT
+
